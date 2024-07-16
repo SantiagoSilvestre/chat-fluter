@@ -7,9 +7,9 @@ import 'package:chat/core/services/auth/auth_service.dart';
 
 class AuthMockService implements AuthService {
   static const _defaultUser = ChatUser(
-    id: '1',
-    name: 'default user',
-    email: 'teste@teste',
+    id: '456',
+    name: 'Bia',
+    email: 'bia@teste',
     imageUrl: 'assets/images/avatar.png',
   );
 
@@ -27,7 +27,7 @@ class AuthMockService implements AuthService {
   Stream<ChatUser?> get userChanges => _userStream;
 
   @override
-  ChatUser? get currentUser => null;
+  ChatUser? get currentUser => _currentUser;
 
   @override
   Future<void> login(String email, String passsword) async {
